@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyBlogApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdP-ZE-XOh">
+                                <rect key="frame" x="32" y="163" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Eca-39-KR5"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3T5-W9-YGo">
+                                <rect key="frame" x="32" y="237" width="350" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="U8X-NO-APH"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Mgu-KI-JIi"/>
+                                </connections>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投稿しよう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86t-m3-Lck">
+                                <rect key="frame" x="40" y="84" width="334" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNE-MO-pgX">
+                                <rect key="frame" x="147" y="601" width="120" height="80"/>
+                                <color key="backgroundColor" red="0.94606136658031093" green="0.94606136658031093" blue="0.94606136658031093" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="64f-kQ-lOK"/>
+                                    <constraint firstAttribute="height" constant="80" id="v3j-eB-vVO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tdP-ZE-XOh" secondAttribute="trailing" constant="32" id="1wu-gT-Tf0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="86t-m3-Lck" secondAttribute="trailing" constant="40" id="6yz-pf-Xpx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3T5-W9-YGo" secondAttribute="trailing" constant="32" id="FOE-Pm-td2"/>
+                            <constraint firstItem="wNE-MO-pgX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H2I-cv-4nD"/>
+                            <constraint firstItem="86t-m3-Lck" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="JEc-3D-2f2"/>
+                            <constraint firstItem="wNE-MO-pgX" firstAttribute="top" secondItem="3T5-W9-YGo" secondAttribute="bottom" constant="64" id="WJn-9x-1A1"/>
+                            <constraint firstItem="3T5-W9-YGo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="dIc-iK-hgb"/>
+                            <constraint firstItem="86t-m3-Lck" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="fFo-Vo-gHP"/>
+                            <constraint firstItem="tdP-ZE-XOh" firstAttribute="top" secondItem="86t-m3-Lck" secondAttribute="bottom" constant="40" id="gHG-RZ-4x8"/>
+                            <constraint firstItem="tdP-ZE-XOh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="l5G-VY-PgL"/>
+                            <constraint firstItem="3T5-W9-YGo" firstAttribute="top" secondItem="tdP-ZE-XOh" secondAttribute="bottom" constant="40" id="xf2-KA-eSz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bodyTextView" destination="3T5-W9-YGo" id="MV3-zA-fi9"/>
+                        <outlet property="postButton" destination="wNE-MO-pgX" id="YN7-LM-xqn"/>
+                        <outlet property="resultLabel" destination="86t-m3-Lck" id="zT1-cH-K20"/>
+                        <outlet property="titleTextField" destination="tdP-ZE-XOh" id="Ib6-yj-ayu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="130"/>
+        </scene>
+    </scenes>
+</document>
